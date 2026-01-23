@@ -110,20 +110,37 @@ if submit:
         explanation="No major churn risk factors detected"
     st.write(explanation)
 
-    st.subheader("Actions Required")
-    if churn_pred>=40:
-        st.write(" Recommend trending content")
-    if churn_pred>=65:    
-        st.write(" Send formal email reminding about subscription renewal.")
-    if churn_pred>=75:
-        st.write(" make a formal phone call.")
-    else:
-        st.write("No major actions required for now.")
+    def generate_actions(user_df, churn_prob):
+    actions = []
+
     
+    # 🔹 Engagement-based actions
+    if watch_hours < 8:
+        actions.append(" Recommend trending and personalized content")
+        actions.append(" Send re-engagement email with content suggestions")
 
+   
+    
+    # 🔹 Subscription value actions
+    if subscription_type == "Basic":
+        actions.append(" Offer upgrade to Standard or Premium plan")
 
+    # 🔹 Family / multi-user incentives
+    if num_profiles > 1:
+        actions.append(" Promote family-friendly or multi-profile content")
 
+    # 🔹 High churn probability fallback
+    if churn_prob > 0.6:
+        actions.append(" Provide exclusive retention offer")
+        actions.append(" Priority customer support outreach")
 
+    # If no actions triggered
+    if not actions:
+        actions.append("✅ No immediate action required")
+
+    return actions
+
+    st.write(actions)
 
 @st.cache_resource
 def load_pr_curve():
@@ -155,6 +172,7 @@ ax.legend()
 ax.grid(True)
 
 st.pyplot(fig)
+
 
 
 
