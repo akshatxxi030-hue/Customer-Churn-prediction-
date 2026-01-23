@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import streamlit as st
 import pickle
-import shap
+
  
 @st.cache_resource
 def load_model():
@@ -153,3 +153,4 @@ ax.legend()
 ax.grid(True)
 
 st.pyplot(fig)
+
