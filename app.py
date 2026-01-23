@@ -111,6 +111,7 @@ if submit:
     st.write(explanation)
 
     st.subheader("Actions Required")
+    
     if churn_prob>0.40:
         st.write(" Recommed trending content.")
     if churn_prob>0.60:
@@ -156,6 +157,7 @@ ax.legend()
 ax.grid(True)
 
 st.pyplot(fig)
+
 
 
 
