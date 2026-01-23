@@ -110,7 +110,7 @@ if submit:
         explanation="No major churn risk factors detected"
     st.write(explanation)
 
-    
+st.subheader("Actions Required")   
 def generate_actions(user_df, churn_prob):
     actions=[]
 
@@ -148,7 +148,7 @@ def generate_actions(user_df, churn_prob):
 
     return actions
 
-
+st.write(actions)
 
 @st.cache_resource
 def load_pr_curve():
@@ -180,3 +180,4 @@ ax.legend()
 ax.grid(True)
 
 st.pyplot(fig)
+
