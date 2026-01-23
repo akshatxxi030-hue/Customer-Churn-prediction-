@@ -120,7 +120,7 @@ if submit:
         num_profiles = user_df["number_of_profiles"].iloc[0]
 
     # 🔹 Engagement-based actions
-        if watch_hours < 5:
+        if watch_hours < 8:
             actions.append(" Recommend trending and personalized content")
             actions.append(" Send re-engagement email with content suggestions")
 
@@ -182,4 +182,5 @@ ax.legend()
 ax.grid(True)
 
 st.pyplot(fig)
+
 
