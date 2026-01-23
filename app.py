@@ -110,7 +110,7 @@ if submit:
         explanation="No major churn risk factors detected"
     st.write(explanation)
     
-    st.subheader("Actions Required")    
+        
     def generate_actions(user_df, churn_prob):
         actions=[]
 
@@ -182,3 +182,4 @@ ax.legend()
 ax.grid(True)
 
 st.pyplot(fig)
+
