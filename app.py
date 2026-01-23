@@ -116,9 +116,10 @@ if submit:
     if churn_prob>0.60:
         st.write(" Send a formal subscription renewal email.")
     if churn_prob>0.75:
-        st.write(" Give Discount vouchers and a formal phone call.")
-    else:
-        st.write("No major actions required for now")
+        st.write(" Give Discount vouchers.")
+   
+    if churn_prob<40:
+        st.write("No actions required for now.")
     
 
 
@@ -155,6 +156,7 @@ ax.legend()
 ax.grid(True)
 
 st.pyplot(fig)
+
 
 
 
