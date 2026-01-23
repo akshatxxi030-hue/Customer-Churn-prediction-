@@ -111,11 +111,11 @@ if submit:
     st.write(explanation)
 
     st.subheader("Actions Required")
-    if churn_prob>=0.40:
+    if churn_pred>=0.40:
         st.write(" Recommend trending content")
-    if churn_prob>=0.65:    
+    if churn_pred>=0.65:    
         st.write(" Send formal email reminding about subscription renewal.")
-    if churn_prob>=.75:
+    if churn_pred>=.75:
         st.write(" make a formal phone call.")
     else:
         st.write("No major actions required for now.")
@@ -155,4 +155,5 @@ ax.legend()
 ax.grid(True)
 
 st.pyplot(fig)
+
 
