@@ -1,82 +1,100 @@
 Deployed demo link with streamlit- https://gle2jspvf48c5ihgqxrvvc.streamlit.app/
 Deployed fast api with render -https://customer-churn-prediction-gnnf.onrender.com/predict
 
-This project is an end-to-end customer churn prediction system that combines a machine learning model with an interactive web interface and a production-ready backend API.
+# 📉 Customer Churn Prediction System
 
-The application predicts the probability that a customer will churn, helping businesses identify at-risk users and take proactive retention actions.
+An end-to-end **Machine Learning–powered Customer Churn Prediction application** built using **FastAPI** (backend), **Streamlit** (frontend), fully **Dockerized**, and **deployed on Render**.  
+The system predicts whether a customer is likely to churn, allows **manual threshold tuning**, highlights **risk indicators**, and provides **actionable retention strategies**.
 
-
-
-Overview
-
-Customer churn is a major challenge for subscription-based platforms.
-This project demonstrates how machine learning can be used to:
-	•	Estimate churn probability for individual customers
-	•	Adjust decision thresholds dynamically
-	•	Categorize customers into risk levels
-	•	Support data-driven business decisions
+---
 
 
+## 🧠 Project Overview
 
-Application Components
+Customer churn prediction is a critical business problem where identifying at-risk customers early can significantly improve retention.  
+This project delivers a **production-ready ML pipeline** that supports real-time predictions with business-oriented decision control.
 
-Frontend
-	•	Built using Streamlit
-	•	Provides an interactive UI for entering customer details
-	•	Includes a decision threshold slider to control sensitivity
-	•	Displays churn probability, risk level, and recommendations
+---
+
+All components are containerized using **Docker** and deployed on **Render Cloud Platform**.
+
+---
+
+## ✨ Key Features
+
+- Real-time churn prediction
+- Manual probability threshold adjustment
+- User-driven input form
+- Churn probability with binary classification
+- Risk indicator identification
+- Actionable customer retention recommendations
+- Scalable and cloud-deployable architecture
+
+---
+
+## 🧾 User Inputs
+
+The system accepts customer details such as:
+- Age
+- Region
+- Monthly watch hours
+- Subscription type (Basic / Standard / Premium)
+- Number of profiles
+
+These features are validated using **Pydantic** before inference.
+
+---
+
+## 🎯 Manual Threshold Control
+
+Instead of a fixed 0.5 cutoff, users can:
+- Adjust the churn probability threshold manually
+- Control precision vs recall trade-off
+- Align predictions with business objectives
+
+---
+
+## 📊 Prediction Output
+
+The model returns:
+- **Churn Probability (%)**
+- **Final Prediction (Churn / No Churn)**
+- **Risk Level (Low / High)**
+- **Key Risk Indicators**
+- **Recommended Actions**
+
+---
+
+## 🧠 Risk Indicators
+
+The system identifies churn drivers such as:
+- Low engagement (watch hours)
+- High subscription cost
+- Multiple profiles usage
+- Region-based behavioral patterns
+
+---
+
+## 🛠️ Recommended Actions
+
+Based on risk level, the system suggests:
+- Loyalty discounts
+- Personalized content recommendations
+- Engagement campaigns
+- Subscription plan optimization
+
+ Tech Stack
 
 Backend
-	•	Built using FastAPI
-	•	Exposes a REST API for predictions
-	•	Dockerized for consistent deployment
-	•	Deployed as a public API on the cloud
+	•	FastAPI
+	•	Pydantic
+	•	Scikit-learn
+	•	Uvicorn
 
-Machine Learning Model
-	•	Trained using scikit-learn
-	•	Uses a preprocessing pipeline for categorical and numerical features
-	•	Outputs a probability score used for threshold-based classification
+Frontend
+	•	Streamlit
 
+DevOps & Deployment
+	•	Docker
+	•	Render
 
-
-Features
-	•	Interactive customer input form
-	•	Adjustable churn decision threshold
-	•	Real-time churn probability prediction
-	•	Risk level classification (Low / Medium / High)
-	•	Business-oriented risk indicators
-	•	Actionable retention recommendations
-	•	Production-style API deployment
-
-
-
-How It Works
-	1.	User enters customer details in the UI
-	2.	Frontend sends a request to the FastAPI backend
-	3.	Backend preprocesses input data
-
-  Tech Stack
-	•	Frontend: Streamlit
-	•	Backend: FastAPI
-	•	ML: Scikit-learn
-	•	Data Processing: Pandas, NumPy
-	•	Deployment: Docker, Render
-
-  
-  Deployment
-	•	Backend API is containerized using Docker
-	•	Deployed as a cloud web service
-	•	Frontend communicates with the backend via a public API URL
-	•	Frontend and backend are deployed independently
-
-
-Project Highlights
-	•	Clean separation of frontend and backend
-	•	Production-ready API design
-	•	Threshold-based business decision logic
-	•	Cloud-native deployment workflow
-	•	Suitable for real-world ML use cases
-  
-	4.	ML model predicts churn probability
-	5.	Probability is compared against a threshold
-	6.	Result is returned and displayed in the UI
