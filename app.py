@@ -1,7 +1,7 @@
 import streamlit as st
 import requests
 
-API_URL = "https://customer-churn-prediction-gnnf.onrender.com/"
+API_URL = "https://customer-churn-prediction-gnnf.onrender.com/predict"
 
 st.set_page_config(page_title="Customer Churn Predictor", layout="centered")
 st.title("📉 Customer Churn Prediction")
@@ -59,3 +59,4 @@ if st.button("Predict Churn"):
     else:
 
         st.error("API Error. Please check backend.")
+
