@@ -2,8 +2,8 @@ from fastapi import FastAPI
 from pydantic import BaseModel,Field,computed_field
 from typing import Literal,Annotated,ClassVar,Dict
 import pandas as pd
-from schema.user_input import user_input
-from model.predict import churn_decision_engine,model
+from user_input import user_input
+from predict import churn_decision_engine,model
 
 app= FastAPI()
 
@@ -23,4 +23,5 @@ def health_check():
 
 @app.post("/predict")
 def predict_churn(user_input:user_input,threshold:float=0.39):
+
     return churn_decision_engine(user_input,threshold)
