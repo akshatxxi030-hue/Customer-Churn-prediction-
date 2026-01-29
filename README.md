@@ -1,6 +1,9 @@
 ##Deployed demo link with streamlit- https://gle2jspvf48c5ihgqxrvvc.streamlit.app/
 ##Deployed fast api with render -https://customer-churn-prediction-gnnf.onrender.com/predict
 
+NOTE-- THE API IS DEPLOYED WITH RENDER SO IT MIGHT TAKE 30 SECONDS TO GIVE THE FIRST PREDIDCTION DUE TO FREE PLAN LIMITS . 
+SORRY FOR THE INCONVINENCE
+
 # 📉 Customer Churn Prediction System
 
 An end-to-end **Machine Learning–powered Customer Churn Prediction application** built using **FastAPI** (backend), **Streamlit** (frontend), fully **Dockerized**, and **deployed on Render**.  
