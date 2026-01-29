@@ -1,5 +1,5 @@
-Deployed demo link with streamlit- https://gle2jspvf48c5ihgqxrvvc.streamlit.app/
-Deployed fast api with render -https://customer-churn-prediction-gnnf.onrender.com/predict
+**Deployed demo link with streamlit- https://gle2jspvf48c5ihgqxrvvc.streamlit.app/
+**Deployed fast api with render -https://customer-churn-prediction-gnnf.onrender.com/predict
 
 # 📉 Customer Churn Prediction System
 
